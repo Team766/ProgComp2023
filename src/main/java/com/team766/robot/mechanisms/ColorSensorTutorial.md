@@ -11,6 +11,10 @@ After creating a `ColorSensor.java` file in the mechanisms folder, copy and past
 `import edu.wpi.first.wpilibj.I2C;`\
 `import edu.wpi.first.wpilibj.util.Color`;
 
+Also, make sure to paste the following line of code where you instantiate your variables:\
+`private final I2C.Port i2cPort = I2C.Port.kOnboard;`\
+This creates a variable that represents the port your sensor will be plugged into.
+
 ## Helpful Links
 - [Documentation](https://codedocs.revrobotics.com/java/com/revrobotics/package-summary.html)
 - [Example Code](https://github.com/REVrobotics/Color-Sensor-v3-Examples/tree/master/Java) (Your code won't look exactly like this!)
