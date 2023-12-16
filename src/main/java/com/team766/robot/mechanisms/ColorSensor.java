@@ -28,19 +28,18 @@ public class ColorSensor {
 	public ArrayList<Color> colorList = new ArrayList<>(4);
 
 	public ColorSensor() {
+		// create an arrayList of all of the colors
 		colorList.add(redTargetColor);
 		colorList.add(yellowTargetColor);
 		colorList.add(greenTargetColor);
 		colorList.add(blueTargetColor);
-	}
-	// make sure the computers can recognize these colors
-	public void robotInit() {
+		
+		//make sure the robots can recognise the colors
 		m_colorMatcher.addColorMatch(colorList.get(0));
 		m_colorMatcher.addColorMatch(colorList.get(1));
 		m_colorMatcher.addColorMatch(colorList.get(2));
 		m_colorMatcher.addColorMatch(colorList.get(3));
 	}
-
 	public String nameOfColor() {
 		// gets the normalized data of the color (ex: 0.1, 0.4, 0.5)
 		Color detectedColor = m_colorSensor.getColor();
